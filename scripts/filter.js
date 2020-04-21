@@ -1,12 +1,11 @@
 // "use strict";
-
 AFRAME.registerComponent("face-filter", {
   init: function () {
     // Solution for Getting Entities.
     var sceneEl = this.el;
     var glasses = sceneEl.querySelectorAll("a-gltf-model");
-    console.log(glasses);
-    console.log(this.el);
+    glasses[0].object3D.position.set(0, 0.002, 0);
+    glasses[0].object3D.rotation.set(0, 0, 0);
   },
 });
 
